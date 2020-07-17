@@ -1,0 +1,28 @@
+<%- include ('partials/header.ejs') %>
+<body>
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <h1> Cadastre-se nesta vaga</h1>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <form method="POST" action="/cadastroCandidatos/<%= vaga.id%>">
+          <div class="form-group">
+              <label for="exampleInputEmail1">Nome</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nome">
+             
+          </div>
+          <div class="form-group">
+              <label for="exampleInputPassword1">Descrição</label>
+              <input type="email" class="form-control" name="email"> 
+          </div>
+
+              <button type="submit" class="btn btn-dark">Cadastrar</button>
+        </form>
+        
+    </div>
+</body>
+</body>
+<%- include ('partials/footer.ejs') %>

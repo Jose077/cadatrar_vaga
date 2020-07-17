@@ -1,0 +1,43 @@
+
+<%- include ('partials/header.ejs') %>
+<br><br><br><br>
+
+
+<div class="container">
+  <hr>
+  
+  
+      
+ 
+  <div class="card ">
+    <div class="card-header ">
+      <h4>Todos os candidatos cadastrados</h4>
+    </div>
+    <div class="card-body">
+      <table class="table" m-5>
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+          </tr>
+        </thead>
+        <% cadastrados.forEach(candidato => { %>
+        <tbody>
+          <tr>
+            <td><%=candidato.nome%></td>
+            <td><%=candidato.email%></td>
+          </tr>
+          <%}) %>
+     
+      
+    </div>
+  </div>
+
+
+   
+</div>
+
+
+
+</body>
+<%- include ('partials/footer.ejs') %>

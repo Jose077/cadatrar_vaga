@@ -1,0 +1,54 @@
+
+<%- include ('partials/header.ejs') %>
+
+<div class="imagemback container-fluid ">
+
+  <br><br><br><br>
+  <div class="d-flex py-5">
+       <div class="mx-auto">
+        <h1> Encontre a vaga perfeita para você</h1> 
+      </div>
+  </div>
+  <div class="d-flex ">
+   
+      <form class="form-inline mx-auto" action="/" method="GET">
+        <div class="form-group ">
+          <input type="text" class="form-control inputbusca" name="busca">
+          <button type="submit" class="busca btn-dark ">Buscar</button>
+        </div>
+
+      </form>
+
+     
+
+    </div>
+</div>
+<br>
+<div class="container">
+  
+  <hr>
+  <h1>Todas as vagas disponiveis</h1> 
+  <hr>
+  <% vagas.forEach(vaga => { %>
+  <div class="card">
+    <div class="card-header ">
+      <h4><%= vaga.empresa%></h4>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= vaga.descricao %> </h5> <br>
+
+      <a href="/cadastrados/<%= vaga.id%>" class="btn btn-secondary float-right mr-2">candidatos</a>
+      <a href="/view/candidatos/<%= vaga.id%>" class="btn btn-dark btn-right float-right mr-2">Cadastrar-se</a>
+      
+    </div>
+  </div>
+  <hr>
+  <%})%>
+ 
+   
+</div>
+
+
+
+</body>
+<%- include ('partials/footer.ejs') %>

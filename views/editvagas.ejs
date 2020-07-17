@@ -1,0 +1,26 @@
+<%- include ('partials/header.ejs') %>
+<body>
+<br><br><br><br>
+        <div class="container">
+            <div class="row">
+                <h1> Cadastre sua vaga </h1>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <form method="POST" action="/cadastroVagas">
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Vaga</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nome">
+                 
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">Descrição</label>
+                  <textarea type="text" class="form-control" name="descricao"> </textarea>
+              </div>
+
+                  <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+</body>
+<%- include ('partials/footer.ejs') %>

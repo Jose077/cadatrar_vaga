@@ -1,0 +1,34 @@
+.imagemback {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/backgroud.jpg"); 
+
+    margin-top: auto;
+    height: 500px;
+    
+}
+
+#formbusca{
+        
+        display: flex;
+        
+
+}
+
+/*Busca input*/
+.inputbusca {
+    height: calc(2rem + .75rem + 2px);
+    border-radius: 0%;
+    border: 1.5px solid black;
+    display: inline;
+
+}
+
+.busca{
+    height: calc(2em + .75rem + 2px);
+    width: 100px;
+    
+}
+.form-inline .form-control{
+    width: 400px;
+}
